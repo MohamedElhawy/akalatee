@@ -1,0 +1,151 @@
+
+
+
+<!-- SLIDER -->
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" *ngIf="slider_images.length ? true : false">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="http://satafood.codesroots.com:3000/{{ slider_images[0].photo }}" class="d-block w-100 slider-img-style-cus" alt="...">
+      </div>
+
+      <div class="carousel-item" data-bs-interval="10000">
+        <img src="http://satafood.codesroots.com:3000/{{ slider_images[1].photo }}" class="d-block w-100 slider-img-style-cus" alt="...">
+      </div>
+
+      <div class="carousel-item" data-bs-interval="10000">
+        <img src="http://satafood.codesroots.com:3000/{{ slider_images[2].photo }}" class="d-block w-100 slider-img-style-cus" alt="...">
+      </div>
+
+      <div class="carousel-item" data-bs-interval="10000">
+        <img src="http://satafood.codesroots.com:3000/{{ slider_images[3].photo }}" class="d-block w-100 slider-img-style-cus" alt="...">
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>   
+</div>
+
+
+<!-- NEW OFFERS -->
+<div class="container mt-5">
+    <div class="row">
+        <h3 class="text-dark fw-bold new-offer-header">New Offers</h3>
+        <p class="mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+    </div>
+</div>
+
+<div class="container mb-5 mt-3" *ngIf="new_offers.length ? true : false">
+    <div class="row gap-4 mx-auto" >
+
+        <div class="card px-0" style="width: 18rem;" *ngFor="let offer of new_offers">
+            <img src="http://satafood.codesroots.com:3000/{{ offer.cover }}" class="card-img-top" alt="..." height="286">
+            <div class="card-body">
+              <h5 class="card-title">{{ offer.name }}</h5>
+              <p class="card-text">{{ offer.description }}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li  *ngFor="let cusin of offer.cuisines" class="list-group-item">{{ cusin.name }}</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- CATEGORIES -->
+<div class="container my-5 py-5">
+    <div class="row">
+        <h3 class="text-dark fw-bold new-offer-header">Categories</h3>
+        <p class="mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+    </div>
+</div>
+
+
+
+<div class="container my-5 pb-5" *ngIf="category_list.length ? true : false">
+
+    <div class="row">
+
+
+        <div class="col-lg-6">
+            <div class="work-sec animate-img first-box">
+                <a href="#">
+    
+                    <img class="image-fit" src="http://satafood.codesroots.com:3000/{{ category_list[0].photo }}" alt="Flights">
+    
+                    <div class="text-wrapper">
+                        <h2 class="text-white no-margin fw-600 text-uppercase">{{ category_list[0].name }}</h2>
+                    </div>
+    
+                </a>
+            </div>
+        </div>
+        
+        
+    
+        <div class="col-lg-6">
+    
+            <div class="row">
+    
+                <div class="col-sm-6">
+                    <div class="work-sec animate-img">
+                        <a href="#">
+    
+                            <img class="image-fit" src="http://satafood.codesroots.com:3000/{{ category_list[1].photo }}" alt="Flights">
+            
+                            <div class="text-wrapper">
+                                <h2 class="text-white no-margin fw-600 text-uppercase">{{ category_list[1].name }}</h2>
+                            </div>
+            
+                        </a>
+                    </div>
+                </div>
+    
+    
+                <div class="col-sm-6">
+                    <div class="work-sec animate-img">
+                        <a href="#">
+    
+                            <img class="image-fit" src="http://satafood.codesroots.com:3000/{{ category_list[2].photo }}" alt="Flights">
+            
+                            <div class="text-wrapper">
+                                <h2 class="text-white no-margin fw-600 text-uppercase">{{ category_list[2].name }}</h2>
+                            </div>
+            
+                        </a>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="row">
+                <div class="col-12">
+                    <div class="work-sec animate-img">
+                        <a href="#">
+    
+                            <img class="image-fit" src="http://satafood.codesroots.com:3000/{{ category_list[3].photo }}" alt="Flights">
+            
+                            <div class="text-wrapper">
+                                <h2 class="text-white no-margin fw-600 text-uppercase">{{ category_list[3].name }}</h2>
+                            </div>
+            
+                        </a>
+                    </div>
+                </div>      
+            </div>
+    
+        </div>
+ 
+    
+    </div>
+</div>
+
+

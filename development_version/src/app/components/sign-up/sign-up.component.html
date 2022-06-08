@@ -1,0 +1,39 @@
+
+<main class="form-signin">
+    <form class="align-items-center d-flex flex-column justify-content-center" [formGroup]="sign_up_form">
+
+      <img class="mb-4" src="./assets/img/akalatee_favicon.png" alt="" width="72" height="57">
+
+      <h1 class="h3 mb-3 fw-normal text-center w-100">Please fill the form</h1>
+  
+      <div class="form-floating w-100">
+        <input type="email" class="form-control top-input" id="floatingInput" placeholder="name@example.com" name="email" formControlName="email">
+        <label for="floatingInput">Email address</label>
+      </div>
+
+      <div *ngIf="sign_up_form.get('email')?.invalid && sign_up_form.touched" class="w-100 ps-1 mt-2"><p  class="error-message"> {{ sign_up_form.get('email')?.hasError('required') ? "email is empty" : "email is invalid" }} </p></div>
+     
+      <div class="form-floating w-100">
+        <input type="password" class="form-control bottom-input" id="floatingPassword" placeholder="Password" name="password" formControlName="password">
+        <label for="floatingPassword">Password</label>
+      </div>
+
+      <div *ngIf="sign_up_form.get('password')?.invalid && sign_up_form.touched" class="w-100 ps-1 mt-2"><p class="error-message"> {{ sign_up_form.get('password')?.hasError('required') ? "password is empty" : "password must be more than 6 digits" }} </p></div>
+  
+
+      <button class="w-100 btn btn-lg btn-primary mt-3" type="button" (click)="sign_up()" [disabled]="!sign_up_form.valid">sign up</button>
+      <a href="#" routerLink="/sign-in" class="fw-bold mt-3 text-capitalize text-decoration-none text-decoration-underline text-muted sign-up-btn">Already have account? Sign in</a>
+
+
+      <div *ngIf="alert_message" class="toast align-items-center text-white bg-success border-0 d-flex mt-3" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex justify-content-center w-100">
+          <div class="toast-body text-center">
+            Account Created! ⭐
+          </div>
+        </div>
+      </div>
+
+
+      <p class="mt-5 mb-3 text-muted text-center">© 2022–2023</p>
+    </form>
+</main>
