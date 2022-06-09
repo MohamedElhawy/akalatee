@@ -1,0 +1,149 @@
+.footer
+{
+    background-color: #2d3e52;
+}
+
+.footer-bottom-box
+{
+    background-color: #283340;
+}
+
+
+.footer-top-header-cus::after
+{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #fff;
+    margin-top: 20px;
+}    
+
+
+.social-box-footer
+{
+    display: flex;
+    align-items: center;
+}
+
+.social-box-footer li
+{
+    margin-right: 15px;
+    margin: 0;
+    position: relative;
+}
+
+.social-box-footer li a
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: initial;
+    border: 2px solid #fff;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 34px;
+    border-radius: 100%;
+}
+
+.footer-gallery-box
+{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footer-gallery-box li
+{
+    width: 33%;
+    height: 68px;
+}
+
+.footer-gallery-box li img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+.btn-submit-cus
+{
+    border-color: #01b7f2 !important;
+    color: #01b7f2 !important;
+    background: #fff !important;
+}
+
+.btn-first-cus
+{
+    display: inline-block;
+    padding: 12px 40px;
+    position: relative;
+    transition: all .5s;
+    background: #0000;
+    color: inherit;
+    border: 1px solid #0000;
+    font-size: 14px;
+    overflow: hidden;
+    z-index: 1;
+    text-align: center;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+.btn-submit-cus:hover {
+    color: #fff !important;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.btn-submit-cus:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: #00a3c8 !important;
+    width: 0;
+    transition: all .5s;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.btn-submit-cus:hover:before {
+    width: 100%;
+}
+
+
+.footer-social-item:hover > .footer-social-anchor
+{
+    background: #01b7f2;
+    border: #01b7f2;
+    transition: 0.5s;
+}
+
+
+
+
+@media screen and (max-width: 991px)
+{
+    .top-footer-2-bg-btn
+    {
+        width: 100%;
+        height: 42px;
+    }
+
+    .top-footer-2-bg-btn-box
+    {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+}

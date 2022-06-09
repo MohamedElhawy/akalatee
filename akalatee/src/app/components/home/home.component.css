@@ -1,0 +1,53 @@
+
+
+
+.slider-img-style-cus
+{
+    max-height: 100vh;
+    min-height: 211px;
+}
+
+.new-offer-header::after
+{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #01b7f2;
+    margin-top: 20px;
+}
+
+
+.gallery-grid-box
+{
+    background: green;
+    height: 500px;
+}
+
+
+.image-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.text-wrapper {
+    width: 100%;
+    background: 0 0;
+    background: linear-gradient(180deg,#0000,#000);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    line-height: 1;
+    padding: 100px 20px 20px;
+}
+
+.our-work-sec .work-sec.first-box {
+    height: calc(100% - 10px);
+}
+
+.animate-img {
+    position: relative;
+    overflow: hidden;
+}
